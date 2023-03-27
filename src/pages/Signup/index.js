@@ -3,7 +3,7 @@ import { NavLink , useNavigate} from "react-router-dom";
 import "../../css/signup.css";
 import {publicPost} from "../../utilities/apiCaller";
 
-function SignUp() {
+function Signup() {
 
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
@@ -16,7 +16,7 @@ function SignUp() {
         // console.log(name + ' ' + email)
 
         const response = await publicPost(
-            "/signup",
+            "/user",
             JSON.stringify({
                 name: name,
                 email: email,
@@ -36,7 +36,7 @@ function SignUp() {
                 <br></br>
 
                 <label htmlFor="name">Name </label>
-                <input val={name} onChange={(e) => setName(e.target.value)} type="text" className="input-box" placeholder="Enter your name here" required/>
+                <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="input-box" placeholder="Enter your name here" required/>
                 <br></br>
 
                 <label htmlFor="email">Email </label>
@@ -55,4 +55,4 @@ function SignUp() {
     )
 }
 
-export default SignUp;
+export default Signup;
