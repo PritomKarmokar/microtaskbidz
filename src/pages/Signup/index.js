@@ -1,17 +1,32 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink , useNavigate} from "react-router-dom";
 import "../../css/signup.css";
+import {publicPost} from "../../utilities/apiCaller";
 
 function SignUp() {
 
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [name, setName] = useState("");
+    const [msg, setMsg] = useState("");
+    const navigateTo = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(name + ' ' + email)
-    }
+        // console.log(name + ' ' + email)
+
+        const response = await publicPost(
+            "/signup",
+            JSON.stringify({
+                name: name,
+                email: email,
+                password: pass,
+            })
+        );
+
+        setMsg(response.msg);
+        navigateTo("/"); // SignIn isn't completed yet, when complete it'll navigate to "/signin"
+    };
 
     return (
         <div className="auth-container">
