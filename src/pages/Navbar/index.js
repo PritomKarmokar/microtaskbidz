@@ -5,7 +5,7 @@ import "../../css/navbar.css";
 function Navbar(){
     return(
         <nav className="nav">
-        <a className ="site-title" href="/">Rain Design</a>
+        <p className ="site-title"><NavLink to="/">Rain Design</NavLink></p>
         <ul>
             <li><p><NavLink to="/signin">Sign In</NavLink></p></li>
             

@@ -25,7 +25,7 @@ function Signup() {
         );
 
         setMsg(response.msg);
-        navigateTo("/"); // SignIn isn't completed yet, when complete it'll navigate to "/signin"
+        navigateTo("/signin"); // SignIn isn't completed yet, when complete it'll navigate to "/signin"
     };
 
     return (
@@ -46,7 +46,7 @@ function Signup() {
                 <label htmlFor="password">Password </label>
                 <input val={pass} onChange={(e) => setPass(e.target.value)} type="password" className="input-box" placeholder="Enter your password here" required/>
                 <br></br>
-                <button type="submit" className="sign-btn"> <NavLink to="/">Signup</NavLink></button>
+                <button type="submit" className="sign-btn"> <NavLink to="/signin">Signup</NavLink></button>
                 <hr></hr>
                 <p className="p-class">Already have an account?<NavLink to="/signin" className="nav-link">Sign In</NavLink></p>
             </form>
