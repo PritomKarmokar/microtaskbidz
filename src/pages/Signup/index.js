@@ -48,7 +48,7 @@ function Signup() {
                 <br></br>
                 <button type="submit" className="sign-btn"> <NavLink to="/">Signup</NavLink></button>
                 <hr></hr>
-                <p className="p-class">Already have an account?<NavLink to="/" className="nav-link">Sign In</NavLink></p>
+                <p className="p-class">Already have an account?<NavLink to="/signin" className="nav-link">Sign In</NavLink></p>
             </form>
             
         </div>

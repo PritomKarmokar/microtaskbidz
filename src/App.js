@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home, Signup, Signin } from "./pages";
+import { Home, Signup, Signin, Navbar} from "./pages";
 
 function App() {
   return (

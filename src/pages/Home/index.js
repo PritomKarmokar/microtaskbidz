@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../Navbar/index.js"
 import "../../css/signup.css";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <NavLink to="/signin">
         Sign in
       </NavLink>
+      {/* <Navbar>Hello</Navbar> */}
     </div>
   );
 };
