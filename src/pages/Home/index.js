@@ -5,7 +5,7 @@ import "../../css/signup.css";
 const Home = () => {
   return (
     <div>
-      <Navbar>Hello</Navbar>
+      <Navbar></Navbar>
       <h1 className="my-6 text-center text-3xl font-bold">Welcome to React</h1>
       
     </div>
